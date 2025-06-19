@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/MLOPs/Sentiment-mlops/mlruns/773476614174210931/3dda7d5acaca4f1eb2f89d21256ae3db/artifacts
+end_time: 1750339764438
+entry_point_name: ''
+experiment_id: '773476614174210931'
+lifecycle_stage: active
+run_id: 3dda7d5acaca4f1eb2f89d21256ae3db
+run_name: popular-bear-432
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1750339730053
+status: 3
+tags: []
+user_id: SULTAN

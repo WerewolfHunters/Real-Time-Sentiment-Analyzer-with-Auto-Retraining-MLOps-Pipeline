@@ -1,0 +1,6 @@
+artifact_location: file:///C:/MLOPs/Sentiment-mlops/mlruns/773476614174210931
+creation_time: 1750339729071
+experiment_id: '773476614174210931'
+last_update_time: 1750339729071
+lifecycle_stage: active
+name: Sentiment_Classifier
