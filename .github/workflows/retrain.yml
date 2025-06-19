@@ -1,0 +1,35 @@
+name: Auto Retrain Sentiment Model
+
+on:
+  workflow_dispatch:  # Manual trigger
+  schedule:
+    - cron: '0 0 * * 1'  # Every Monday at 00:00 UTC
+
+jobs:
+  retrain:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        pip install mlflow
+
+    - name: Retrain model
+      run: python app/train.py
+
+    - name: Commit updated model
+      run: |
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add models/sentiment_model.pkl
+        git commit -m "🔁 Auto-retrained model"
+        git push
